@@ -1,0 +1,20 @@
+ip: 192.168.88.88
+memory: 2048
+cpus: 1
+provider: virtualbox
+authorize: ~/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+folders:
+    -
+        map: ./
+        to: /home/vagrant/code
+        type: "nfs"
+sites:
+    -
+        map: videowebb.local
+        to: /home/vagrant/code/web
+databases:
+    - videowebb
+name: videowebb
+hostname: videowebb

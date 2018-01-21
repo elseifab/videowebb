@@ -9,6 +9,7 @@ web/app/uploads/*
 # WordPress
 web/wp
 web/.htaccess
+web/app/languages
 
 # Dotenv
 .env
@@ -18,3 +19,6 @@ web/.htaccess
 # Composer
 vendor/*
 !vendor/.gitkeep
+
+# Vagrant
+.vagrant
