@@ -18,3 +18,7 @@ set('env_vars', '/usr/bin/env');
 set('keep_releases', 5);
 set('shared_dirs', ['web/app/uploads']);
 set('shared_files', ['.env']);
+
+task('activate-plugins', function () {
+    run("cd {{ deploy_path }}/current && vendor/bin/wp plugin activate redirection");
+});
