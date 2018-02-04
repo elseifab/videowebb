@@ -6,13 +6,13 @@ include_once __DIR__ . '/vendor/deployer/deployer/recipe/composer.php';
 
 host('video.elseif.se')
     ->port(22)
-    ->set('deploy_path', '')
+    ->set('deploy_path', '/mnt/persist/www/docroot_video')
     ->user('deploy')
     ->set('branch', 'master')
     ->stage('production')
     ->identityFile('~/.ssh/id_rsa');
 
-set('repository', 'git@github.com:ekandreas/.git');
+set('repository', 'git@github.com:elseifab/videowebb.git');
 
 set('env_vars', '/usr/bin/env');
 set('keep_releases', 5);
