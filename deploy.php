@@ -22,3 +22,4 @@ set('shared_files', ['.env']);
 task('activate-plugins', function () {
     run("cd {{ deploy_path }}/current && vendor/bin/wp plugin activate redirection");
 });
+after('deploy', 'activate-plugins');
